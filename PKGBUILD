@@ -1,16 +1,16 @@
 # Maintainer: Quentin Bouvet <qbouvet at outlook dot com>
 pkgname=bash-timer
-pkgver=1.1.0
+pkgver=1.5.0
 pkgrel=1
 pkgdesc="Human-readable execution time for every command in bash!"
 arch=('any')
 url="https://github.com/hopeseekr/bash-timer"
 license=('APACHE')
-depends=('bash-preexec-git')
+depends=('bash-preexec')
 
 source=("${pkgname}-${pkgver}::https://github.com/hopeseekr/bash-timer/archive/v${pkgver}.tar.gz")
 install=${pkgname}.install
-sha256sums=('75e16d41893074c2f57cb2c8dff1e04c8dc74dd8f43ee3917f9a48982d040753')
+sha256sums=('577be5bd1a5dd8818883cba4f840362a30e64c0440fb3647d784203f59eb37d8')
 
 package() {
   cd "${srcdir}/"

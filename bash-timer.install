@@ -1,6 +1,6 @@
  
 bash_timer_path=/usr/share/bash-timer/bash-timer.sh
-preexec_path=/usr/share/bash-prexec/bash_preexec.sh         # bash-preexec dependancy
+preexec_path=/usr/share/bash-preexec/bash-preexec.sh         # bash-preexec dependancy
 
 post_install() {
     printf "\
@@ -13,8 +13,9 @@ post_install() {
 >   [[ -f $preexec_path ]] && source $preexec_path
 >
 
-$ echo \"[[ -f $bash_timer_path ]] && source $bash_timer_path\" >> /etc/bash.bashrc
-$ echo \"[[ -f $preexec_path ]] && source $preexec_path\" >> /etc/bash.bashrc
+> Then run these commands for system-wide installation.
+$ echo \"[[ -f $bash_timer_path ]] && source $bash_timer_path\" | sudo tee -a /etc/bash.bashrc
+$ echo \"[[ -f $preexec_path ]] && source $preexec_path\" | sudo tee -a /etc/bash.bashrc
 
 "
 }
